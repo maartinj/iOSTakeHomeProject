@@ -15,6 +15,7 @@ struct PeopleView: View {
     //    It can be removed -> @State private var users: [User] = []
     @State private var shouldShowCreate = false
     @State private var shouldShowSuccess = false
+    @State private var hasAppeared = false
     
     var body: some View {
         NavigationView {
@@ -44,19 +45,24 @@ struct PeopleView: View {
                 ToolbarItem(placement: .primaryAction) {
                     create
                 }
+                ToolbarItem(placement: .navigationBarLeading) {
+                    refresh
+                }
             }
             .task {
-                await vm.fetchUsers()
-                
-                // MARK: Old method
-                //                do {
-                //                    let res = try StaticJSONMapper.decode(file: "UsersStaticData", type: UsersResponse.self)
-                //
-                //                    users = res.data
-                //                } catch {
-                //                    // TODO: Handle any errors
-                //                    print(error)
-                //                }
+                if !hasAppeared {
+                    await vm.fetchUsers()
+                    hasAppeared = true
+                    // MARK: Old method
+                    //                do {
+                    //                    let res = try StaticJSONMapper.decode(file: "UsersStaticData", type: UsersResponse.self)
+                    //
+                    //                    users = res.data
+                    //                } catch {
+                    //                    // TODO: Handle any errors
+                    //                    print(error)
+                    //                }
+                }
             }
             .sheet(isPresented: $shouldShowCreate) {
                 CreateView {
@@ -111,6 +117,17 @@ private extension PeopleView {
                     .system(.headline, design: .rounded)
                     .bold()
                 )
+        }
+        .disabled(vm.isLoading)
+    }
+    
+    var refresh: some View {
+        Button {
+            Task {
+                await vm.fetchUsers()
+            }
+        } label: {
+            Symbols.refresh
         }
         .disabled(vm.isLoading)
     }
