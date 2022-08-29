@@ -17,8 +17,6 @@ class JSONMapperTests: XCTestCase {
         let userResponse = try? StaticJSONMapper.decode(file: "UsersStaticData", type: UsersResponse.self)
         XCTAssertNotNil(userResponse, "User response shouldn't be nil")
         
-        // Film 10:14
-        // https://youtu.be/q2f-0u_2q5Q?t=614
         XCTAssertEqual(userResponse?.page, 1, "Page number should be 1")
         XCTAssertEqual(userResponse?.perPage, 6, "Page number should be 6")
         XCTAssertEqual(userResponse?.total, 12, "Total should be 12")
