@@ -4,9 +4,8 @@
 //
 //  Created by Marcin Jędrzejak on 07/09/2022.
 //
-
+#if DEBUG
 import Foundation
-@testable import iOSTakeHomeProject
 
 class NetworkingManagerCreateFailureMock: NetworkingManagerImpl {
     
@@ -18,3 +17,4 @@ class NetworkingManagerCreateFailureMock: NetworkingManagerImpl {
         throw NetworkingManager.NetworkingError.invalidURL
     }
 }
+#endif

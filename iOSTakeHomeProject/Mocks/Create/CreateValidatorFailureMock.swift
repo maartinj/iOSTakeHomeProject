@@ -4,9 +4,8 @@
 //
 //  Created by Marcin Jędrzejak on 07/09/2022.
 //
-
+#if DEBUG
 import Foundation
-@testable import iOSTakeHomeProject
 
 struct CreateValidatorFailureMock: CreateValidatorImpl {
     
@@ -14,3 +13,4 @@ struct CreateValidatorFailureMock: CreateValidatorImpl {
         throw CreateValidator.CreateValidatorError.invalidFirstName
     }
 }
+#endif

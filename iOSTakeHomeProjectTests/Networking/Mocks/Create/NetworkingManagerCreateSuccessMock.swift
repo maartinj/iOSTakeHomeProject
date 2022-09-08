@@ -4,9 +4,8 @@
 //
 //  Created by Marcin Jędrzejak on 07/09/2022.
 //
-
+#if DEBUG
 import Foundation
-@testable import iOSTakeHomeProject
 
 class NetworkingManagerCreateSuccessMock: NetworkingManagerImpl {
     
@@ -16,3 +15,4 @@ class NetworkingManagerCreateSuccessMock: NetworkingManagerImpl {
     
     func request(session: URLSession, _ endpoint: Endpoint) async throws {}
 }
+#endif
