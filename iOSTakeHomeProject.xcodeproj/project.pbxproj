@@ -32,7 +32,6 @@
 		E4B8875E28C9632C00659FDB /* UITestingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B8875D28C9632C00659FDB /* UITestingHelper.swift */; };
 		E4C237582897265E0030A4E4 /* PersonItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C237572897265E0030A4E4 /* PersonItemView.swift */; };
 		E4C2375B28972AA90030A4E4 /* PillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C2375A28972AA90030A4E4 /* PillView.swift */; };
-		E4C7053F28C8DB48001FDD6A /* NetworkingManagerUserDetailsResponseFailureMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C7053E28C8DB48001FDD6A /* NetworkingManagerUserDetailsResponseFailureMock.swift */; };
 		E4C7054228C8DBB8001FDD6A /* DetailsViewModelSuccessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C7054128C8DBB8001FDD6A /* DetailsViewModelSuccessTests.swift */; };
 		E4C7054428C8E0C6001FDD6A /* DetailsViewModelFailureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C7054328C8E0C6001FDD6A /* DetailsViewModelFailureTests.swift */; };
 		E4C7054D28C8E9C2001FDD6A /* CreateViewModelSuccessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C7054C28C8E9C2001FDD6A /* CreateViewModelSuccessTests.swift */; };
@@ -58,6 +57,9 @@
 		E4F00DEE28A5BB6A005DF8E1 /* NewPerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F00DED28A5BB6A005DF8E1 /* NewPerson.swift */; };
 		E4F00DF028A5CA76005DF8E1 /* CreateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F00DEF28A5CA76005DF8E1 /* CreateViewModel.swift */; };
 		E4F2F1B0289FD436003C5C10 /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F2F1AF289FD436003C5C10 /* NetworkingManager.swift */; };
+		E4FFC7BD28CAA64F0016A071 /* DetailsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FFC7BC28CAA64F0016A071 /* DetailsUITests.swift */; };
+		E4FFC7BE28CAB0190016A071 /* NetworkingManagerUserDetailsResponseFailureMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C7053E28C8DB48001FDD6A /* NetworkingManagerUserDetailsResponseFailureMock.swift */; };
+		E4FFC7C028CAB6100016A071 /* DetailsFailureUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FFC7BF28CAB6100016A071 /* DetailsFailureUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -132,6 +134,8 @@
 		E4F00DED28A5BB6A005DF8E1 /* NewPerson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPerson.swift; sourceTree = "<group>"; };
 		E4F00DEF28A5CA76005DF8E1 /* CreateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateViewModel.swift; sourceTree = "<group>"; };
 		E4F2F1AF289FD436003C5C10 /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
+		E4FFC7BC28CAA64F0016A071 /* DetailsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsUITests.swift; sourceTree = "<group>"; };
+		E4FFC7BF28CAB6100016A071 /* DetailsFailureUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsFailureUITests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -254,6 +258,7 @@
 		E4B8874F28C95F1500659FDB /* iOSTakeHomeProjectUITests */ = {
 			isa = PBXGroup;
 			children = (
+				E4FFC7BB28CAA59B0016A071 /* Details */,
 				E4B8875928C9602200659FDB /* People */,
 			);
 			path = iOSTakeHomeProjectUITests;
@@ -580,6 +585,15 @@
 			path = API;
 			sourceTree = "<group>";
 		};
+		E4FFC7BB28CAA59B0016A071 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				E4FFC7BC28CAA64F0016A071 /* DetailsUITests.swift */,
+				E4FFC7BF28CAB6100016A071 /* DetailsFailureUITests.swift */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -721,7 +735,6 @@
 				E4C7054D28C8E9C2001FDD6A /* CreateViewModelSuccessTests.swift in Sources */,
 				E49E584528BCE7C300C23A62 /* PeopleViewModelSuccessTests.swift in Sources */,
 				E4C7054228C8DBB8001FDD6A /* DetailsViewModelSuccessTests.swift in Sources */,
-				E4C7053F28C8DB48001FDD6A /* NetworkingManagerUserDetailsResponseFailureMock.swift in Sources */,
 				E4B8874928C95AFE00659FDB /* CreateViewModelFailureTests.swift in Sources */,
 				E4C7055128C8ED05001FDD6A /* CreateViewModelValidationFailureTests.swift in Sources */,
 				E42B908C28B9F67800FBD993 /* NetworkingEndpointTests.swift in Sources */,
@@ -733,6 +746,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4B8875B28C9606100659FDB /* PeopleScreenUITests.swift in Sources */,
+				E4FFC7C028CAB6100016A071 /* DetailsFailureUITests.swift in Sources */,
+				E4FFC7BD28CAA64F0016A071 /* DetailsUITests.swift in Sources */,
 				E41055CF28C9918F00B3D2DA /* PeopleFailureUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -754,6 +769,7 @@
 				E41055CA28C9857100B3D2DA /* NetworkingManagerUserResponseSuccessMock.swift in Sources */,
 				E4D537E928964427002F2867 /* ContentView.swift in Sources */,
 				E48F788728ABFD3400255892 /* HapticsManager.swift in Sources */,
+				E4FFC7BE28CAB0190016A071 /* NetworkingManagerUserDetailsResponseFailureMock.swift in Sources */,
 				E41055C728C9855C00B3D2DA /* NetworkingManagerCreateFailureMock.swift in Sources */,
 				E40421B728AE3DB600CD233A /* Endpoint.swift in Sources */,
 				E41055CD28C9858C00B3D2DA /* CreateValidatorFailureMock.swift in Sources */,

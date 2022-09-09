@@ -6,7 +6,6 @@
 //
 #if DEBUG
 import Foundation
-@testable import iOSTakeHomeProject
 
 class NetworkingManagerUserDetailsResponseFailureMock: NetworkingManagerImpl {
     
