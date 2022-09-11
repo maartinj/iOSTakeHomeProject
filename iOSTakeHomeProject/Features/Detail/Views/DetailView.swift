@@ -10,7 +10,7 @@ import SwiftUI
 struct DetailView: View {
     
     let userId: Int
-//    @StateObject private var vm = DetailViewModel() -> Before Independency Injection
+//    @StateObject private var vm = DetailViewModel() -> Before Dependency Injection
     @StateObject private var vm: DetailViewModel
     //    @State private var userInfo: UserDetailResponse? -> Old, not needed, needed when there was no ViewModel
     

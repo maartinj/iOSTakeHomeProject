@@ -21,6 +21,10 @@
 		E41D6B092899F07E0028C2D6 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41D6B082899F07E0028C2D6 /* DetailView.swift */; };
 		E42B908C28B9F67800FBD993 /* NetworkingEndpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42B908B28B9F67800FBD993 /* NetworkingEndpointTests.swift */; };
 		E4474EDA28B3D086000EF2E3 /* JSONMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4474ED928B3D086000EF2E3 /* JSONMapperTests.swift */; };
+		E44B4A4C28CD9DF90079C441 /* CreateScreenFormValidationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44B4A4B28CD9DF90079C441 /* CreateScreenFormValidationTests.swift */; };
+		E44B4A4E28CDA5640079C441 /* CreateFailureUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44B4A4D28CDA5640079C441 /* CreateFailureUITests.swift */; };
+		E44DB37C28CE195B0055A07F /* CreateScreenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44DB37B28CE195B0055A07F /* CreateScreenUITests.swift */; };
+		E48441AF28CCF822006D7E3D /* CreateScreenUIValidTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48441AE28CCF822006D7E3D /* CreateScreenUIValidTests.swift */; };
 		E489AEAA28A1C4A700B80AB4 /* PeopleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E489AEA928A1C4A700B80AB4 /* PeopleViewModel.swift */; };
 		E48F788728ABFD3400255892 /* HapticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48F788628ABFD3400255892 /* HapticsManager.swift */; };
 		E49E584228BC0C5800C23A62 /* NetworkingManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49E584128BC0C5800C23A62 /* NetworkingManagerTests.swift */; };
@@ -87,6 +91,10 @@
 		E42B908B28B9F67800FBD993 /* NetworkingEndpointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingEndpointTests.swift; sourceTree = "<group>"; };
 		E4474ECF28B3D010000EF2E3 /* iOSTakeHomeProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSTakeHomeProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4474ED928B3D086000EF2E3 /* JSONMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONMapperTests.swift; sourceTree = "<group>"; };
+		E44B4A4B28CD9DF90079C441 /* CreateScreenFormValidationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateScreenFormValidationTests.swift; sourceTree = "<group>"; };
+		E44B4A4D28CDA5640079C441 /* CreateFailureUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateFailureUITests.swift; sourceTree = "<group>"; };
+		E44DB37B28CE195B0055A07F /* CreateScreenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateScreenUITests.swift; sourceTree = "<group>"; };
+		E48441AE28CCF822006D7E3D /* CreateScreenUIValidTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateScreenUIValidTests.swift; sourceTree = "<group>"; };
 		E489AEA928A1C4A700B80AB4 /* PeopleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewModel.swift; sourceTree = "<group>"; };
 		E48F788628ABFD3400255892 /* HapticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticsManager.swift; sourceTree = "<group>"; };
 		E49E583E28BC082B00C23A62 /* MockURLSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLSessionProtocol.swift; sourceTree = "<group>"; };
@@ -222,6 +230,17 @@
 			path = Mapper;
 			sourceTree = "<group>";
 		};
+		E48441AD28CCF7E1006D7E3D /* Create */ = {
+			isa = PBXGroup;
+			children = (
+				E48441AE28CCF822006D7E3D /* CreateScreenUIValidTests.swift */,
+				E44DB37B28CE195B0055A07F /* CreateScreenUITests.swift */,
+				E44B4A4B28CD9DF90079C441 /* CreateScreenFormValidationTests.swift */,
+				E44B4A4D28CDA5640079C441 /* CreateFailureUITests.swift */,
+			);
+			path = Create;
+			sourceTree = "<group>";
+		};
 		E48F788528ABFD2600255892 /* Haptics */ = {
 			isa = PBXGroup;
 			children = (
@@ -258,6 +277,7 @@
 		E4B8874F28C95F1500659FDB /* iOSTakeHomeProjectUITests */ = {
 			isa = PBXGroup;
 			children = (
+				E48441AD28CCF7E1006D7E3D /* Create */,
 				E4FFC7BB28CAA59B0016A071 /* Details */,
 				E4B8875928C9602200659FDB /* People */,
 			);
@@ -745,9 +765,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E48441AF28CCF822006D7E3D /* CreateScreenUIValidTests.swift in Sources */,
+				E44DB37C28CE195B0055A07F /* CreateScreenUITests.swift in Sources */,
 				E4B8875B28C9606100659FDB /* PeopleScreenUITests.swift in Sources */,
+				E44B4A4C28CD9DF90079C441 /* CreateScreenFormValidationTests.swift in Sources */,
 				E4FFC7C028CAB6100016A071 /* DetailsFailureUITests.swift in Sources */,
 				E4FFC7BD28CAA64F0016A071 /* DetailsUITests.swift in Sources */,
+				E44B4A4E28CDA5640079C441 /* CreateFailureUITests.swift in Sources */,
 				E41055CF28C9918F00B3D2DA /* PeopleFailureUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

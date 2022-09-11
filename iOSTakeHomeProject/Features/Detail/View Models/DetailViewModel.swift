@@ -29,7 +29,7 @@ final class DetailViewModel: ObservableObject {
             self.userInfo = try await networkingManager.request(session: .shared,
                                                                 .detail(id: id),
                                                                 type: UserDetailResponse.self)
-//            self.userInfo = try await NetworkingManager.shared.request(.detail(id: id), type: UserDetailResponse.self) -> Before Independency Injection
+//            self.userInfo = try await NetworkingManager.shared.request(.detail(id: id), type: UserDetailResponse.self) -> Before Dependency Injection
         } catch {
             self.hasError = true
             if let networkingError = error as? NetworkingManager.NetworkingError {

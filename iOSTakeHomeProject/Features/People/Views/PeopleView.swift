@@ -11,7 +11,7 @@ struct PeopleView: View {
     
     private let columns = Array(repeating: GridItem(.flexible()), count: 2)
     
-//    @StateObject private var vm = PeopleViewModel() -> Before Independency Injection
+//    @StateObject private var vm = PeopleViewModel() -> Before Dependency Injection
     @StateObject private var vm: PeopleViewModel
     //    It can be removed -> @State private var users: [User] = []
     @State private var shouldShowCreate = false
@@ -149,6 +149,7 @@ private extension PeopleView {
                 )
         }
         .disabled(vm.isLoading)
+        .accessibilityIdentifier("createBtn")
     }
     
     var refresh: some View {
