@@ -63,6 +63,9 @@ struct PeopleView: View {
                         .padding()
                         .accessibilityIdentifier("peopleGrid")
                     }
+                    .refreshable {
+                        await vm.fetchUsers()
+                    }
                     .overlay(alignment: .bottom) {
                         if vm.isFetching {
                             ProgressView()
