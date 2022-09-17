@@ -20,6 +20,7 @@
 		E41055CF28C9918F00B3D2DA /* PeopleFailureUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41055CE28C9918F00B3D2DA /* PeopleFailureUITests.swift */; };
 		E41D6B092899F07E0028C2D6 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41D6B082899F07E0028C2D6 /* DetailView.swift */; };
 		E42B908C28B9F67800FBD993 /* NetworkingEndpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42B908B28B9F67800FBD993 /* NetworkingEndpointTests.swift */; };
+		E43612F228D22B8C00F932D0 /* View+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43612F128D22B8C00F932D0 /* View+Navigation.swift */; };
 		E4474EDA28B3D086000EF2E3 /* JSONMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4474ED928B3D086000EF2E3 /* JSONMapperTests.swift */; };
 		E44B4A4C28CD9DF90079C441 /* CreateScreenFormValidationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44B4A4B28CD9DF90079C441 /* CreateScreenFormValidationTests.swift */; };
 		E44B4A4E28CDA5640079C441 /* CreateFailureUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44B4A4D28CDA5640079C441 /* CreateFailureUITests.swift */; };
@@ -89,6 +90,7 @@
 		E41055CE28C9918F00B3D2DA /* PeopleFailureUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleFailureUITests.swift; sourceTree = "<group>"; };
 		E41D6B082899F07E0028C2D6 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		E42B908B28B9F67800FBD993 /* NetworkingEndpointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingEndpointTests.swift; sourceTree = "<group>"; };
+		E43612F128D22B8C00F932D0 /* View+Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Navigation.swift"; sourceTree = "<group>"; };
 		E4474ECF28B3D010000EF2E3 /* iOSTakeHomeProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSTakeHomeProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4474ED928B3D086000EF2E3 /* JSONMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONMapperTests.swift; sourceTree = "<group>"; };
 		E44B4A4B28CD9DF90079C441 /* CreateScreenFormValidationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateScreenFormValidationTests.swift; sourceTree = "<group>"; };
@@ -207,6 +209,14 @@
 				E42B908B28B9F67800FBD993 /* NetworkingEndpointTests.swift */,
 			);
 			path = Endpoint;
+			sourceTree = "<group>";
+		};
+		E43612F028D22B1300F932D0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E43612F128D22B8C00F932D0 /* View+Navigation.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		E4474ED028B3D010000EF2E3 /* iOSTakeHomeProjectTests */ = {
@@ -430,6 +440,7 @@
 		E4D537F92896468D002F2867 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				E43612F028D22B1300F932D0 /* Extensions */,
 				E4CA0ED028AC836A0058D60D /* UserDefaults */,
 				E48F788528ABFD2600255892 /* Haptics */,
 				E4F2F1AE289FD426003C5C10 /* API */,
@@ -781,6 +792,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E41055CB28C9857B00B3D2DA /* NetworkingManagerUserResponseFailureMock.swift in Sources */,
+				E43612F228D22B8C00F932D0 /* View+Navigation.swift in Sources */,
 				E4D5381728964D4D002F2867 /* StaticJSONMapper.swift in Sources */,
 				E41D6B092899F07E0028C2D6 /* DetailView.swift in Sources */,
 				E4D37A6B28AB015B006CB9C5 /* CreateValidator.swift in Sources */,

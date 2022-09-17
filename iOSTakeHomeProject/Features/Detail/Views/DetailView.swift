@@ -81,9 +81,8 @@ struct DetailView_Previews: PreviewProvider {
     }
     
     static var previews: some View {
-        NavigationView {
-            DetailView(userId: previewUserId)
-        }
+        DetailView(userId: previewUserId)
+            .embededInNavigation()
     }
 }
 

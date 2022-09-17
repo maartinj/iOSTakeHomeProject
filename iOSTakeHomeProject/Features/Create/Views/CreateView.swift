@@ -11,16 +11,16 @@ struct CreateView: View {
     
     @Environment(\.dismiss) private var dismiss
     @FocusState private var focusedField: Field?
-//    @StateObject private var vm = CreateViewModel() -> Before Dependency Injection
+    //    @StateObject private var vm = CreateViewModel() -> Before Dependency Injection
     @StateObject private var vm: CreateViewModel
     
-//    let successfulAction: () -> Void -> Before Dependency Injection
+    //    let successfulAction: () -> Void -> Before Dependency Injection
     private let successfulAction: () -> Void
     
     init(successfulAction: @escaping () -> Void) {
         self.successfulAction = successfulAction
         
-        #if DEBUG
+#if DEBUG
         
         if UITestingHelper.isUITesting {
             
@@ -31,54 +31,53 @@ struct CreateView: View {
             _vm = StateObject(wrappedValue: CreateViewModel())
         }
         
-        #else
-            _vm = StateObject(wrappedValue: CreateViewModel())
-        #endif
+#else
+        _vm = StateObject(wrappedValue: CreateViewModel())
+#endif
     }
     
     var body: some View {
-        NavigationView {
-            Form {
-                
-                Section {
-                    firstname
-                    lastname
-                    job
-                } footer: {
-                    Text("")
+        Form {
+            
+            Section {
+                firstname
+                lastname
+                job
+            } footer: {
+                Text("")
+                    .foregroundStyle(.red)
+                if case .validation(let err) = vm.error,
+                   let errorDesc = err.errorDescription {
+                    Text(errorDesc)
                         .foregroundStyle(.red)
-                    if case .validation(let err) = vm.error,
-                       let errorDesc = err.errorDescription {
-                        Text(errorDesc)
-                            .foregroundStyle(.red)
-                    }
-                }
-
-                Section {
-                    submit
                 }
             }
-            .disabled(vm.state == .submitting)
-            .navigationTitle("Create")
-            .toolbar {
-                ToolbarItem(placement: .primaryAction) {
-                    done
-                }
+            
+            Section {
+                submit
             }
-            .onChange(of: vm.state) { formState in
-                if formState == .successful {
-                    dismiss()
-                    successfulAction()
-                }
+        }
+        .disabled(vm.state == .submitting)
+        .navigationTitle("Create")
+        .toolbar {
+            ToolbarItem(placement: .primaryAction) {
+                done
             }
-            .alert(isPresented: $vm.hasError,
-                   error: vm.error) { }
+        }
+        .onChange(of: vm.state) { formState in
+            if formState == .successful {
+                dismiss()
+                successfulAction()
+            }
+        }
+        .alert(isPresented: $vm.hasError,
+               error: vm.error) { }
             .overlay {
                 if vm.state == .submitting {
                     ProgressView()
                 }
             }
-        }
+            .embededInNavigation()
     }
 }
 
